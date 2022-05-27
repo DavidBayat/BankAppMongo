@@ -2,13 +2,13 @@ import React, { ChangeEvent, useEffect, useState } from 'react';
 import './App.css';
 
 interface Transaction {
-  createdAt: Date,
-  amount: number
+    createdAt: any,
+    amount: any
 }
 interface User {
-  id: string,
-  name : string,
-  currentBalance: number,
+  id: any,
+  name : any,
+  currentBalance: any,
   transactions: Transaction[] 
 }
 
