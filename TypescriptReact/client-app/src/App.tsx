@@ -51,7 +51,7 @@ function App() {
     <main className='main'>
     <header className='header'>
       <form className='inputcontainer'>
-        <input id='AddUser' type="text" placeholder='Sök konto' name='userItem' value={userItem} onChange={handleChange}/>
+        <input id='AddUser' type="text" placeholder='Lägg till användare' name='userItem' value={userItem} onChange={handleChange}/>
         {/* <input type="number" placeholder='Insättning / uttag' name='taskDescription' value={transaction} onChange={handleChange}/> */}
       </form>
       <button id='btnAddUser' onClick={handleSubmit}>Lägg till Användare</button>
