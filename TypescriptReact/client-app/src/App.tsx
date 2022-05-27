@@ -1,5 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import './App.css';
+import User from './components/User';
 
 interface Transaction {
     createdAt: any,
@@ -42,24 +43,23 @@ function App() {
   }
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    
     setUserItem(e.target.value)
-    
   };
 
   return (
-    <main className='main'>
+    <main className='App'>
     <header className='header'>
       <form className='inputcontainer'>
-        <input id='AddUser' type="text" placeholder='Lägg till användare' name='userItem' value={userItem} onChange={handleChange}/>
+        <input id='txtTodoItemToAdd' type="text" placeholder='Skapa nytt' name='userItem' value={userItem} onChange={handleChange}/>
         {/* <input type="number" placeholder='Insättning / uttag' name='taskDescription' value={transaction} onChange={handleChange}/> */}
       </form>
-      <button id='btnAddUser' onClick={handleSubmit}>Lägg till Användare</button>
+      <button className='button' id='btnAddUser' onClick={handleSubmit}>Lägg till</button>
     </header>
-    <ul className='todolist'>
-       {userData.map(c => 
-      <li className='task'>{c.name} || {c.currentBalance}</li> )}
-    </ul>
+    <div className='todolist'>
+       {userData.map(item => {
+         return <User key={item.id} name={item.name} currentBalance={item.currentBalance} /> })
+        }
+    </div>
   </main>
   );
 }
