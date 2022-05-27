@@ -10,8 +10,8 @@ const User = ({ name, currentBalance } : Props) => {
     return (
       <div className="task">
         <div className="content">
-          <span>Namn: {name}</span>
-          <span>Saldo: {currentBalance}</span>
+          <span>{name}</span>
+          <span>{currentBalance}</span>
         </div>
         <button
         //   onClick={() => {
