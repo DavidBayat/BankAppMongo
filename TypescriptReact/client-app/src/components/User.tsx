@@ -9,10 +9,16 @@ interface Props {
 const User = ({ name, currentBalance } : Props) => {
     return (
       <div className="task">
-        <div className="content">
-          <span>{name}</span>
-          <span>{currentBalance}</span>
-        </div>
+        <table className="content">
+          <tr>
+              <th>Namn</th>
+              <th>Saldo</th>
+          </tr>
+          <tr>
+              <td>{name}</td>
+              <td>{currentBalance}</td>
+          </tr>
+        </table>
         <button
         //   onClick={() => {
         //     completeTask(task.taskName);

@@ -55,10 +55,26 @@ function App() {
       </form>
       <button className='button' id='btnAddUser' onClick={handleSubmit}>Lägg till</button>
     </header>
-    <div className='todolist'>
-       {userData.map(item => {
+    <div className='App_table'>
+    <table>
+        <tr>
+          <th>Kontonamn</th>
+          <th>Saldo</th>
+          <th>  </th>
+        </tr>
+        {userData.map((val, key) => {
+          return (
+            <tr key={key}>
+              <td>{val.name}</td>
+              <td>{val.currentBalance}</td>
+              <td><a href="">Välj</a></td>
+            </tr>
+          )
+        })}
+      </table>
+       {/* {userData.map(item => {
          return <User key={item.id} name={item.name} currentBalance={item.currentBalance} /> })
-        }
+        } */}
     </div>
   </main>
   );
