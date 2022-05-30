@@ -1,3 +1,4 @@
+
 .App {
   display: flex;
   align-items: center;
@@ -7,90 +8,21 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  margin: 0%;
-  padding: 0%;
-}
-
 .header {
-  flex: 30%;
   background-color: white;
   width: 100%;
-  display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: flex-end;
 
-.header .inputContainer {
   display: flex;
-  flex-direction: column;
-}
-
-.header input {
-  width: 200px;
-  height: 40px;
-  border: none;
-  border-bottom-left-radius: 8px;
-  border-top-left-radius: 8px;
-  padding-left: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
+  margin-bottom: 50px;
 }
 
 .header button {
-  width: 70px;
-  height: 87px;
   border: none;
   border-bottom-right-radius: 8px;
   border-top-right-radius: 8px;
   padding-left: 10px;
-  cursor: pointer;
-}
-
-.todoList {
-  flex: 70%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding-top: 50px;
-  flex-direction: column;
-}
-
-.task {
-  width: 500px;
-  height: 50px;
-  display: flex;
-  color: black;
-  margin: 15px;
-}
-
-.task .content {
-  flex: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.task .content span {
-  display: grid;
-  place-items: center;
-  border: 1px solid black;
-  width: 100%;
-  height: 100%;
-  font-size: 18px;
-  border-right: none;
-  background-color: whitesmoke;
-}
-
-.task button {
-  flex: 20%;
-  height: 100%;
-  border: none;
-  background-color: lightseagreen;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  color: white;
   cursor: pointer;
 }
 
@@ -108,11 +40,11 @@ table {
   height: 200px;
   background-color: rgb(208, 208, 208);
 }
+
 tr {
   border: 2px solid black;
 }
-
-  
+ 
 td {
   text-align: center;
   background-color: white;
