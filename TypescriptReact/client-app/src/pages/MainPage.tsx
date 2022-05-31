@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 
 interface User {
-  id: any,
-  name : any,
-  currentBalance: any,
+  id: String,
+  name : String,
+  currentBalance: Number,
 }
 
 

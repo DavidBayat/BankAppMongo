@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import Moment from 'moment';
 
 interface Transaction {
-  createdAt: any,
+  createdAt: Date,
   amount: any
 }
 
@@ -60,13 +60,12 @@ const DetailPage = () => {
         })}
       </table>
       <div className='header'>
-    <form>
-        <input id='txtTodoItemToAdd' type="text" placeholder='Belopp' name='userItem' onChange={handleChange}/>
-      </form>
+        <form>
+          <input id='txtTodoItemToAdd' type="text" placeholder='Belopp' name='userItem' onChange={handleChange}/>
+        </form>
       <button className='button' id='btnAddUser' onClick={handleSubmit}>Insättning</button>
     </div>
     </div>
-    
   </main>
   )
 }
