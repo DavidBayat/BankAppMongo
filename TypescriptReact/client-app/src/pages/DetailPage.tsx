@@ -42,6 +42,9 @@ const DetailPage = () => {
     <main className='App'>
     
     <div className='App_table'>
+      <div className='Saldo'>
+        <h3>Saldo:  {transactionData.reduce((a, b) => a + b.amount, 0)} SEK</h3>
+      </div>
       <table>
         <tr>
           <th>Datum</th>
@@ -56,13 +59,14 @@ const DetailPage = () => {
           )
         })}
       </table>
-    </div>
-    <header className='header'>
+      <div className='header'>
     <form>
         <input id='txtTodoItemToAdd' type="text" placeholder='Belopp' name='userItem' onChange={handleChange}/>
       </form>
       <button className='button' id='btnAddUser' onClick={handleSubmit}>Insättning</button>
-    </header>
+    </div>
+    </div>
+    
   </main>
   )
 }

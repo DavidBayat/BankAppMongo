@@ -60,13 +60,14 @@ function MainPage() {
           )
         })}
       </table>
-    </div>
-    <header className='header'>
+      <div className='header'>
       <form>
         <input id='txtTodoItemToAdd' type="text" placeholder='Skapa nytt' name='userItem' value={userItem} onChange={handleChange}/>
       </form>
       <button className='button' id='btnAddUser' onClick={handleSubmit}>Lägg till</button>
-    </header>
+    </div>
+    </div>
+    
   </main>
   );
 }

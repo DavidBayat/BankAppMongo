@@ -68,7 +68,7 @@ namespace TypescriptReact.Controllers
                                          where user.Id == id
                                          select user.CurrentBalance;
 
-                    int updatedBalance = currentBalance.First() + amount;
+                    int updatedBalance = currentBalance.FirstOrDefault() + amount;
 
                     var updateCurrentBalance = Builders<User>.Update.Set("CurrentBalance", updatedBalance);
                     await _bankAccountCollection.FindOneAndUpdateAsync(filter, addNewTransaction);
